@@ -1,0 +1,16 @@
+[package]
+name        = "gur-assets"
+description = "GUR Engine — typed asset handles, async loading, hot-reload"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+log.workspace         = true
+thiserror.workspace   = true
+anyhow.workspace      = true
+serde.workspace       = true
+parking_lot.workspace = true
+image.workspace       = true
+gur-core.workspace    = true

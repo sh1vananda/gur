@@ -1,0 +1,17 @@
+[package]
+name        = "gur-audio"
+description = "GUR Engine — audio engine (kira): music, SFX, spatial audio"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+log.workspace        = true
+thiserror.workspace  = true
+anyhow.workspace     = true
+serde.workspace      = true
+glam.workspace       = true
+kira.workspace       = true
+gur-core.workspace   = true
+gur-assets.workspace = true

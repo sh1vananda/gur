@@ -1,0 +1,15 @@
+[package]
+name        = "gur-narrative"
+description = "GUR Engine — dialogue graph, story state machine, condition evaluator"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+log.workspace          = true
+thiserror.workspace    = true
+serde.workspace        = true
+ron.workspace          = true
+gur-core.workspace     = true
+gur-scripting.workspace = true

@@ -1,0 +1,16 @@
+[package]
+name        = "gur-combat"
+description = "GUR Engine — combat system: action queue, stats, effect pipeline, hitboxes"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+log.workspace         = true
+thiserror.workspace   = true
+serde.workspace       = true
+glam.workspace        = true
+hecs.workspace        = true
+gur-core.workspace    = true
+gur-physics.workspace = true

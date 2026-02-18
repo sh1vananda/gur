@@ -1,0 +1,18 @@
+[package]
+name        = "gur-world"
+description = "GUR Engine — zone/chunk loading, tilemap system, spatial index"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+log.workspace        = true
+thiserror.workspace  = true
+serde.workspace      = true
+ron.workspace        = true
+glam.workspace       = true
+hecs.workspace       = true
+gur-core.workspace   = true
+gur-assets.workspace = true
+gur-render.workspace = true

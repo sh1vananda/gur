@@ -1,0 +1,102 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/gur-core",
+    "crates/gur-render",
+    "crates/gur-audio",
+    "crates/gur-input",
+    "crates/gur-physics",
+    "crates/gur-assets",
+    "crates/gur-narrative",
+    "crates/gur-combat",
+    "crates/gur-world",
+    "crates/gur-save",
+    "crates/gur-scripting",
+    "crates/gur-tools",
+    "game",
+]
+
+[workspace.package]
+version     = "0.1.0"
+edition     = "2021"
+authors     = ["GUR Engine Team"]
+license     = "MIT"
+rust-version = "1.75"
+
+# ─── Shared dependency versions (all crates reference these) ─────────────────
+[workspace.dependencies]
+# Core utilities
+log        = "0.4"
+env_logger = "0.11"
+thiserror  = "1"
+anyhow     = "1"
+
+# Math
+glam = { version = "0.29", features = ["serde"] }
+
+# ECS
+hecs = { version = "0.10", features = ["column-serialize", "row-serialize"] }
+
+# Serialization
+serde     = { version = "1", features = ["derive"] }
+serde_json = "1"
+ron       = "0.8"
+toml      = "0.8"
+
+# Parallelism
+rayon = "1"
+
+# Concurrency
+parking_lot = "0.12"
+
+# Async
+tokio = { version = "1", features = ["full"] }
+
+# Windowing & input
+winit = "0.30"
+
+# Rendering
+wgpu = "22"
+
+# Image loading
+image = { version = "0.25", default-features = false, features = ["png", "jpeg"] }
+
+# Audio
+kira = { version = "0.9", features = ["cpal"] }
+
+# Physics
+rapier2d = { version = "0.22", features = ["serde-serialize"] }
+
+# UI / Debug tools
+egui     = "0.28"
+egui-wgpu = "0.28"
+egui-winit = "0.28"
+
+# Profiling
+profiling = "1"
+
+# Internal engine crates
+gur-core      = { path = "crates/gur-core" }
+gur-render    = { path = "crates/gur-render" }
+gur-audio     = { path = "crates/gur-audio" }
+gur-input     = { path = "crates/gur-input" }
+gur-physics   = { path = "crates/gur-physics" }
+gur-assets    = { path = "crates/gur-assets" }
+gur-narrative = { path = "crates/gur-narrative" }
+gur-combat    = { path = "crates/gur-combat" }
+gur-world     = { path = "crates/gur-world" }
+gur-save      = { path = "crates/gur-save" }
+gur-scripting = { path = "crates/gur-scripting" }
+gur-tools     = { path = "crates/gur-tools" }
+
+[profile.dev]
+opt-level = 1          # Basic opts even in dev (faster than 0)
+
+[profile.dev.package."*"]
+opt-level = 3          # Dependencies always optimized
+
+[profile.release]
+opt-level     = 3
+lto           = "thin"
+codegen-units = 1
+strip         = true

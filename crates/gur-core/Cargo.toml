@@ -1,0 +1,18 @@
+[package]
+name        = "gur-core"
+description = "GUR Engine — ECS world, scheduler, event bus, and core types"
+version.workspace    = true
+edition.workspace    = true
+authors.workspace    = true
+license.workspace    = true
+
+[dependencies]
+log.workspace         = true
+thiserror.workspace   = true
+anyhow.workspace      = true
+glam.workspace        = true
+hecs.workspace        = true
+serde.workspace       = true
+rayon.workspace       = true
+parking_lot.workspace = true
+profiling.workspace   = true

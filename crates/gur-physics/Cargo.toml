@@ -1,0 +1,16 @@
+[package]
+name        = "gur-physics"
+description = "GUR Engine — 2D physics, collision detection, hitbox system (rapier2d)"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+log.workspace       = true
+thiserror.workspace = true
+serde.workspace     = true
+glam.workspace      = true
+rapier2d.workspace  = true
+hecs.workspace      = true
+gur-core.workspace  = true

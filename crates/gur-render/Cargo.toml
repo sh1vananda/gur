@@ -1,0 +1,21 @@
+[package]
+name        = "gur-render"
+description = "GUR Engine — wgpu renderer: sprites, tilemaps, camera, pixel art upscaling"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+log.workspace         = true
+thiserror.workspace   = true
+anyhow.workspace      = true
+serde.workspace       = true
+glam.workspace        = true
+wgpu.workspace        = true
+winit.workspace       = true
+image.workspace       = true
+bytemuck              = { version = "1", features = ["derive"] }
+pollster              = "0.3"
+gur-core.workspace    = true
+gur-assets.workspace  = true
