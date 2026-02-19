@@ -1,0 +1,326 @@
+warning: field `start` is never read
+  --> crates\gur-core\src\time.rs:17:5
+   |
+15 | pub struct Time {
+   |            ---- field in this struct
+16 |     /// Wall-clock time when the engine started.
+17 |     start: Instant,
+   |     ^^^^^
+   |
+   = note: `Time` has derived impls for the traits `Clone` and `Debug`, but these are intentionally ignored during dead code analysis
+   = note: `#[warn(dead_code)]` on by default
+
+warning: `gur-core` (lib) generated 1 warning
+warning: unused variable: `handle`
+  --> crates\gur-assets\src\server.rs:93:31
+   |
+93 |     pub fn get_texture(&self, handle: &Handle<Texture>) -> Option<impl std::ops::Deref<Target = Texture> + '_> {
+   |                               ^^^^^^ help: if this is intentional, prefix it with an underscore: `_handle`
+   |
+   = note: `#[warn(unused_variables)]` on by default
+
+warning: `gur-assets` (lib) generated 1 warning
+   Compiling gur-render v0.1.0 (C:\Users\cyber\Downloads\projects\gur\crates\gur-render)
+warning: missing documentation for a struct field
+  --> crates\gur-physics\src\hitbox.rs:23:5
+   |
+23 |     pub kind:              HitboxKind,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+note: the lint level is defined here
+  --> crates\gur-physics\src\lib.rs:16:9
+   |
+16 | #![warn(missing_docs)]
+   |         ^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-physics\src\hitbox.rs:24:5
+   |
+24 |     pub shape:             ColliderShape,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-physics\src\hitbox.rs:25:5
+   |
+25 |     pub offset:            Vec2,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-physics\src\hitbox.rs:26:5
+   |
+26 |     pub owner:             Entity,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-physics\src\hitbox.rs:27:5
+   |
+27 |     pub damage:            u32,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-physics\src\hitbox.rs:28:5
+   |
+28 |     pub knockback:         Vec2,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-physics\src\hitbox.rs:29:5
+   |
+29 |     pub poise_damage:      u32,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-physics\src\hitbox.rs:30:5
+   |
+30 |     pub active_frames:     u32,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-physics\src\hitbox.rs:31:5
+   |
+31 |     pub frames_remaining:  u32,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+ --> crates\gur-physics\src\world.rs:8:5
+  |
+8 |     pub bodies:         RigidBodySet,
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+ --> crates\gur-physics\src\world.rs:9:5
+  |
+9 |     pub colliders:      ColliderSet,
+  |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-physics\src\world.rs:17:5
+   |
+17 |     pub timestep:       f32,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-physics\src\world.rs:20:5
+   |
+20 |     pub query_pipeline: QueryPipeline,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: `gur-physics` (lib) generated 13 warnings
+warning: missing documentation for a struct field
+  --> crates\gur-narrative\src\dialogue.rs:11:15
+   |
+11 |     SetFlag { key: String, value: bool },
+   |               ^^^^^^^^^^^
+   |
+note: the lint level is defined here
+  --> crates\gur-narrative\src\lib.rs:6:9
+   |
+6  | #![warn(missing_docs)]
+   |         ^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-narrative\src\dialogue.rs:11:28
+   |
+11 |     SetFlag { key: String, value: bool },
+   |                            ^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-narrative\src\dialogue.rs:13:16
+   |
+13 |     GiveItem { item_id: String, count: u32 },
+   |                ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-narrative\src\dialogue.rs:13:33
+   |
+13 |     GiveItem { item_id: String, count: u32 },
+   |                                 ^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-narrative\src\dialogue.rs:15:18
+   |
+15 |     StartQuest { quest_id: String },
+   |                  ^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-narrative\src\dialogue.rs:17:22
+   |
+17 |     ZoneTransition { zone_id: String },
+   |                      ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-input\src\binding.rs:21:19
+   |
+21 |     GamepadAxis { axis: u32, positive: bool, threshold: f32 },
+   |                   ^^^^^^^^^
+   |
+note: the lint level is defined here
+  --> crates\gur-input\src\lib.rs:14:9
+   |
+14 | #![warn(missing_docs)]
+   |         ^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-input\src\binding.rs:21:30
+   |
+21 |     GamepadAxis { axis: u32, positive: bool, threshold: f32 },
+   |                              ^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-input\src\binding.rs:21:46
+   |
+21 |     GamepadAxis { axis: u32, positive: bool, threshold: f32 },
+   |                                              ^^^^^^^^^^^^^^
+
+warning: `gur-narrative` (lib) generated 6 warnings
+warning: `gur-input` (lib) generated 3 warnings
+warning: unused import: `self`
+  --> crates\gur-render\src\backend.rs:22:9
+   |
+22 |         self, CameraUniform, SpriteVertex,
+   |         ^^^^
+   |
+   = note: `#[warn(unused_imports)]` on by default
+
+warning: unused import: `std::sync::Arc`
+ --> crates\gur-render\src\gpu_texture.rs:4:5
+  |
+4 | use std::sync::Arc;
+  |     ^^^^^^^^^^^^^^
+
+warning: variable does not need to be mutable
+   --> crates\gur-render\src\backend.rs:173:13
+    |
+173 |         let mut textures = GpuTextureCache::new(&device, &queue, &texture_bgl);
+    |             ----^^^^^^^^
+    |             |
+    |             help: remove this `mut`
+    |
+    = note: `#[warn(unused_mut)]` on by default
+
+warning: unused variable: `white`
+  --> crates\gur-render\src\gpu_texture.rs:41:13
+   |
+41 |         let white = cache.upload_rgba8(
+   |             ^^^^^ help: if this is intentional, prefix it with an underscore: `_white`
+   |
+   = note: `#[warn(unused_variables)]` on by default
+
+warning: fields `surface_fmt`, `canvas_texture`, `canvas_format`, `camera_bgl`, and `upscale_bgl` are never read
+  --> crates\gur-render\src\backend.rs:39:5
+   |
+33 | pub struct WgpuBackend {
+   |            ----------- fields in this struct
+...
+39 |     surface_fmt: wgpu::TextureFormat,
+   |     ^^^^^^^^^^^
+...
+42 |     canvas_texture:     wgpu::Texture,
+   |     ^^^^^^^^^^^^^^
+43 |     canvas_view:        wgpu::TextureView,
+44 |     canvas_format:      wgpu::TextureFormat,
+   |     ^^^^^^^^^^^^^
+...
+49 |     camera_bgl:        wgpu::BindGroupLayout,
+   |     ^^^^^^^^^^
+50 |     texture_bgl:       wgpu::BindGroupLayout,
+51 |     upscale_bgl:       wgpu::BindGroupLayout,
+   |     ^^^^^^^^^^^
+   |
+   = note: `#[warn(dead_code)]` on by default
+
+warning: missing documentation for a struct field
+  --> crates\gur-render\src\backend.rs:35:5
+   |
+35 |     pub device:  wgpu::Device,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^
+   |
+note: the lint level is defined here
+  --> crates\gur-render\src\lib.rs:10:9
+   |
+10 | #![warn(missing_docs)]
+   |         ^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-render\src\backend.rs:36:5
+   |
+36 |     pub queue:   wgpu::Queue,
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-render\src\gpu_texture.rs:19:5
+   |
+19 |     pub height: u32,
+   |     ^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+ --> crates\gur-render\src\pipeline.rs:7:5
+  |
+7 |     pub position: [f32; 2],
+  |     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+ --> crates\gur-render\src\pipeline.rs:8:5
+  |
+8 |     pub uv:       [f32; 2],
+  |     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+ --> crates\gur-render\src\pipeline.rs:9:5
+  |
+9 |     pub color:    [f32; 4],
+  |     ^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for an associated constant
+  --> crates\gur-render\src\pipeline.rs:13:5
+   |
+13 |     pub const LAYOUT: wgpu::VertexBufferLayout<'static> = wgpu::VertexBufferLayout {
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+warning: missing documentation for a struct field
+  --> crates\gur-render\src\pipeline.rs:28:5
+   |
+28 |     pub view_proj: [[f32; 4]; 4],
+   |     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+   Compiling gur-world v0.1.0 (C:\Users\cyber\Downloads\projects\gur\crates\gur-world)
+   Compiling gur-tools v0.1.0 (C:\Users\cyber\Downloads\projects\gur\crates\gur-tools)
+warning: `gur-render` (lib) generated 13 warnings (run `cargo fix --lib -p gur-render` to apply 3 suggestions)
+   Compiling game v0.1.0 (C:\Users\cyber\Downloads\projects\gur\game)
+error[E0499]: cannot borrow `*self` as mutable more than once at a time
+   --> game\src\scene.rs:274:29
+    |
+222 |         let p = &mut self.player;
+    |                 ---------------- first mutable borrow occurs here
+...
+274 |                             self.deal_player_attack();
+    |                             ^^^^ second mutable borrow occurs here
+...
+287 |                 p.vel = Vec2::ZERO;
+    |                 ------------------ first borrow later used here
+
+error[E0502]: cannot borrow `*self` as immutable because it is also borrowed as mutable
+   --> game\src\scene.rs:314:17
+    |
+222 |         let p = &mut self.player;
+    |                 ---------------- mutable borrow occurs here
+...
+314 |         p.pos = self.move_entity(new_pos, p.half_w(), p.half_h(), p.pos);
+    |                 ^^^^                      - mutable borrow later used here
+    |                 |
+    |                 immutable borrow occurs here
+
+warning: variable does not need to be mutable
+  --> game\src\main.rs:50:9
+   |
+50 |     let mut bus      = EventBus::new();
+   |         ----^^^
+   |         |
+   |         help: remove this `mut`
+   |
+   = note: `#[warn(unused_mut)]` on by default
+
+Some errors have detailed explanations: E0499, E0502.
+For more information about an error, try `rustc --explain E0499`.
+warning: `game` (bin "gur") generated 1 warning
+error: could not compile `game` (bin "gur") due to 2 previous errors; 1 warning emitted

@@ -1,3 +1,83 @@
-target/
+# ─── Rust ────────────────────────────────────────────────────────────────────
+/target/
+**/*.rs.bk
 Cargo.lock
-*_output.txt
+
+# ─── IDE / Editor ────────────────────────────────────────────────────────────
+# VSCode
+.vscode/
+*.code-workspace
+
+# IntelliJ / CLion / RustRover
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ─── OS ──────────────────────────────────────────────────────────────────────
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.stackdump
+[Dd]esktop.ini
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# ─── Game-specific ───────────────────────────────────────────────────────────
+# Save files (user-generated, binary)
+/saves/*.sav
+/saves/*.json
+/saves/*.bin
+
+# Screenshots / captures (if added later)
+/screenshots/
+/captures/
+
+# Logs
+*.log
+logs/
+
+# ─── Build artifacts ─────────────────────────────────────────────────────────
+*.exe
+*.exe.manifest
+*.pdb
+*.ilk
+*.obj
+*.o
+*.a
+*.lib
+*.dll
+*.so
+*.dylib
+
+# ─── Temporary files ─────────────────────────────────────────────────────────
+*.tmp
+*.temp
+*.temp.*
+*.bak
+*.orig
